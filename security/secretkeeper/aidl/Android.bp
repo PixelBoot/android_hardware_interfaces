@@ -24,7 +24,7 @@ aidl_interface {
         "android.hardware.security.authgraph-V1",
     ],
     stability: "vintf",
-    frozen: false,
+    frozen: true,
     backend: {
         java: {
             enabled: false,
@@ -40,6 +40,12 @@ aidl_interface {
             ],
         },
     },
+    versions_with_info: [
+        {
+            version: "1",
+            imports: ["android.hardware.security.authgraph-V1"],
+        },
+    ],
 }
 
 // cc_defaults that includes the latest Secretkeeper AIDL library.
